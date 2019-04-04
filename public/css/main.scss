@@ -1,0 +1,55 @@
+$font: 'Noto Serif TC' , 'serif';
+$colors: (light-green:#D9FFEB, main:#36403B, medium-green:#C3E6D3, dark-green:#6C8075);
+
+nav{
+    background-color: map-get($colors,main);
+    height:2.5rem;
+}
+
+.hidden{
+    display: none;
+}
+
+#nav__hamburger__button{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 2rem;
+    position: absolute;
+    transform: translate(6px, 6px);
+    div{
+        width:1.4rem;
+        height: 0.2rem;
+        margin-bottom: 0.3rem;
+        background-color: map-get($colors, medium-green);
+    }
+}
+
+#nav__mobile__navtray{
+    position: absolute;
+    background-color: map-get($colors, main);
+    opacity: 0.8;
+    width: 5rem;
+    height: 100vh;
+    ul{
+        margin-top:2rem;
+        padding: 0.4rem;
+        li{
+            margin-bottom: 1rem;
+        }
+    }
+    .nav__item{
+        color: map-get($colors, light-green);
+        &--selected{
+            color:darken(map-get($colors, light-green), 20);
+        }    
+    }
+    &__close{
+        float:right;
+        color:white;
+        padding: 0.4rem;
+        font-weight: bold;
+    }
+}
+
+

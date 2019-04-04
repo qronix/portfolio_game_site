@@ -1,0 +1,52 @@
+nav {
+  background-color: #36403B;
+  height: 2.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#nav__hamburger__button {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  height: 2rem;
+  position: absolute;
+  transform: translate(6px, 6px);
+}
+#nav__hamburger__button div {
+  width: 1.4rem;
+  height: 0.2rem;
+  margin-bottom: 0.3rem;
+  background-color: #C3E6D3;
+}
+
+#nav__mobile__navtray {
+  position: absolute;
+  background-color: #36403B;
+  opacity: 0.8;
+  width: 5rem;
+  height: 100vh;
+}
+#nav__mobile__navtray ul {
+  margin-top: 2rem;
+  padding: 0.4rem;
+}
+#nav__mobile__navtray ul li {
+  margin-bottom: 1rem;
+}
+#nav__mobile__navtray .nav__item {
+  color: #D9FFEB;
+}
+#nav__mobile__navtray .nav__item--selected {
+  color: #73ffb5;
+}
+#nav__mobile__navtray__close {
+  float: right;
+  color: white;
+  padding: 0.4rem;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */
