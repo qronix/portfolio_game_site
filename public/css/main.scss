@@ -1,9 +1,36 @@
 $font: 'Noto Serif TC' , 'serif';
 $colors: (light-green:#D9FFEB, main:#36403B, medium-green:#C3E6D3, dark-green:#6C8075);
 
+header{
+    height: 2.4rem;
+}
+
 nav{
     background-color: map-get($colors,main);
     height:2.5rem;
+    display:flex;
+    justify-content: space-between;
+    // align-items: center;
+}
+
+html{
+    background-color: map-get($colors,dark-green);
+}
+
+#nav__desktop__navbar{
+    z-index: 999;
+    @media(min-width: 768px){
+        justify-content: space-around;
+    }
+    @media(max-width:767px){
+        display: none;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
 }
 
 .hidden{
@@ -16,13 +43,43 @@ nav{
     justify-content: space-around;
     height: 2rem;
     position: absolute;
-    transform: translate(6px, 6px);
+    transform: translate(6px, 8px);
     div{
         width:1.4rem;
         height: 0.2rem;
         margin-bottom: 0.3rem;
         background-color: map-get($colors, medium-green);
     }
+    @media(min-width: 426px){
+        display: none;
+    }
+}
+
+#nav__logo__banner{
+    width:20rem;
+    height: 2rem;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top:0.2rem;
+
+    &__img{
+        background: url("../imgs/flareLogo.png");
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: center;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+    }
+
+    &__text{
+        color: white;
+    }
+
+    // height: 10rem;
 }
 
 #nav__mobile__navtray{
@@ -49,6 +106,60 @@ nav{
         color:white;
         padding: 0.4rem;
         font-weight: bold;
+    }
+}
+#main__hero{
+    width:100vw;
+    height: 50vh;
+    background: url('../imgs/heroBanner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#main__content{
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    border:1px solid red;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+    background-color: map-get($colors, medium-green);
+    &__phoneimage{
+        height: 100%;
+        width:20rem;
+        max-height: 293px;
+        z-index: 0;
+        background:url('../imgs/phoneGame1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media(max-width:425px){
+            background-position: right;
+            transform: translateX(-1rem);
+        }
+    }
+
+    &__description{
+        transform: translateY(-8rem);
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px rgba(0,0,0,0.3);
+
+        p{
+            padding: 0 1rem;
+            text-shadow: none;
+            font-weight: 200;
+            line-height: 1.3rem;
+            letter-spacing: 1px;
+
+            span{
+                font-weight: bold;
+                color: darken(map-get($colors, dark-green), 80%);
+                text-shadow: 1px 0px rgba(0,0,0,0.3);            
+            }
+        }
     }
 }
 

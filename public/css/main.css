@@ -1,6 +1,36 @@
+header {
+  height: 2.4rem;
+}
+
 nav {
   background-color: #36403B;
   height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+html {
+  background-color: #6C8075;
+}
+
+#nav__desktop__navbar {
+  z-index: 999;
+}
+@media (min-width: 768px) {
+  #nav__desktop__navbar {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 767px) {
+  #nav__desktop__navbar {
+    display: none;
+  }
+}
+#nav__desktop__navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .hidden {
@@ -13,13 +43,41 @@ nav {
   justify-content: space-around;
   height: 2rem;
   position: absolute;
-  transform: translate(6px, 6px);
+  transform: translate(6px, 8px);
 }
 #nav__hamburger__button div {
   width: 1.4rem;
   height: 0.2rem;
   margin-bottom: 0.3rem;
   background-color: #C3E6D3;
+}
+@media (min-width: 426px) {
+  #nav__hamburger__button {
+    display: none;
+  }
+}
+
+#nav__logo__banner {
+  width: 20rem;
+  height: 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+#nav__logo__banner__img {
+  background: url("../imgs/flareLogo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+#nav__logo__banner__text {
+  color: white;
 }
 
 #nav__mobile__navtray {
@@ -47,6 +105,59 @@ nav {
   color: white;
   padding: 0.4rem;
   font-weight: bold;
+}
+
+#main__hero {
+  width: 100vw;
+  height: 50vh;
+  background: url("../imgs/heroBanner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#main__content {
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #C3E6D3;
+}
+#main__content__phoneimage {
+  height: 100%;
+  width: 20rem;
+  max-height: 293px;
+  z-index: 0;
+  background: url("../imgs/phoneGame1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 425px) {
+  #main__content__phoneimage {
+    background-position: right;
+    transform: translateX(-1rem);
+  }
+}
+#main__content__description {
+  transform: translateY(-8rem);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+#main__content__description p {
+  padding: 0 1rem;
+  text-shadow: none;
+  font-weight: 200;
+  line-height: 1.3rem;
+  letter-spacing: 1px;
+}
+#main__content__description p span {
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=main.css.map */
