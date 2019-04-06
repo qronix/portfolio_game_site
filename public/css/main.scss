@@ -10,15 +10,24 @@ nav{
     height:2.5rem;
     display:flex;
     justify-content: space-between;
-    // align-items: center;
+    position: fixed;
+    z-index: 999;
+    transform: translateZ(0);
 }
 
 html{
-    background-color: map-get($colors,dark-green);
+    // background-color: map-get($colors,dark-green);
+}
+
+#nav__mobile__navbar{
+    width:100vw;
+    position: fixed;
+    transform: translateZ(0);
+
 }
 
 #nav__desktop__navbar{
-    z-index: 999;
+    position: absolute;
     @media(min-width: 768px){
         justify-content: space-around;
     }
@@ -48,7 +57,8 @@ html{
         width:1.4rem;
         height: 0.2rem;
         margin-bottom: 0.3rem;
-        background-color: map-get($colors, medium-green);
+        // background-color: map-get($colors, medium-green);
+        background-color: white;
     }
     @media(min-width: 426px){
         display: none;
@@ -64,7 +74,6 @@ html{
     text-align: center;
     justify-content: center;
     margin-top:0.2rem;
-
     &__img{
         background: url("../imgs/flareLogo.png");
         background-repeat: no-repeat;
@@ -78,8 +87,6 @@ html{
     &__text{
         color: white;
     }
-
-    // height: 10rem;
 }
 
 #nav__mobile__navtray{
@@ -118,20 +125,21 @@ html{
 }
 
 #main__content{
-    z-index: 0;
+    z-index: -10;
     width: 100vw;
-    height: 100vh;
-    border:1px solid red;
+    height: 120vh;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    // align-items: center;
-    background-color: map-get($colors, medium-green);
+    // background-color: map-get($colors, medium-green);
+    // background-color: rgba(255, 255, 255, 0.973);
+    z-index: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+
     &__phoneimage{
-        height: 100%;
+        height: 15rem;
         width:20rem;
         max-height: 293px;
-        z-index: 0;
         background:url('../imgs/phoneGame1.png');
         background-repeat: no-repeat;
         background-size: cover;
@@ -142,25 +150,118 @@ html{
     }
 
     &__description{
-        transform: translateY(-8rem);
+        transform: translateY(-2rem);
         font-weight: bold;
         text-align: center;
-        text-shadow: 1px 1px rgba(0,0,0,0.3);
+        // text-shadow: 1px 1px rgba(0,0,0,0.3);
+        letter-spacing: 0.4px;
 
         p{
             padding: 0 1rem;
             text-shadow: none;
             font-weight: 200;
             line-height: 1.3rem;
-            letter-spacing: 1px;
+            letter-spacing: 0.4px;
 
             span{
                 font-weight: bold;
                 color: darken(map-get($colors, dark-green), 80%);
-                text-shadow: 1px 0px rgba(0,0,0,0.3);            
+                // text-shadow: 1px 0px rgba(0,0,0,0.3);            
             }
         }
     }
+
+    &__store__badges{
+        &__google{
+            max-width: 119px;
+            max-height: 40px;
+        }
+    }
+}
+
+#main__content__two{
+    width:100vw;
+    height: 120vh;
+    margin-bottom: 5rem;
+
+    &__banner{
+        height: 40vh;
+        width: 100%;
+        background: url("../imgs/sectionTwo.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 5rem;
+    }
+
+    &__phoneimage{
+        height: 40%;
+        width:20rem;
+        max-height: 293px;
+        background:url('../imgs/phoneGame2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media(max-width:425px){
+            background-position: left;
+            transform: translateX(1rem);
+        }
+    }
+
+    &__description{
+        margin:0 auto;
+        text-align: center;
+        letter-spacing: 0.4px;
+        p{
+            padding: 0 1rem;
+            line-height: 1rem;
+        }
+    }
+}
+
+#main__content__three{
+    width: 100vw;
+    height: 100vh;
+    &__banner{
+        background: url("../imgs/section_three.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 40%;
+        // filter:blur(1px);
+    }
+    &__banner__overlay{
+        widows: 100%;
+        height: 40%;
+        background-color: rgba(0,0,0,0.4);
+        z-index:10;
+        transform: translateY(-18.3rem);
+        // border:1px solid red;
+    }
+    &__cta{
+        text-align: center;
+        color: rgba(255, 255, 255, 0.897);
+        z-index: 20;
+        transform: translateY(-34rem);
+        h3{
+            margin-bottom: 3rem;
+        }
+        &__button{
+            position: relative;
+            transform: translateY(2rem);
+            text-decoration: none;
+            background-color: map-get($colors, dark-green);
+            border-radius: 4px;
+            padding: 4px 10px;
+            color: map-get($colors, light-green);
+        }
+    }
+}
+
+footer{
+    background-color:map-get($colors, main);
+    height: 30vh;
+    width: 100vw;
 }
 
 
