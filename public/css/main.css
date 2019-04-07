@@ -2,8 +2,15 @@ header {
   height: 2.4rem;
   width: 100vw;
   position: fixed;
-  transform: translate3d(0, 0, 0);
   z-index: 999;
+  background-color: #36403B;
+}
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
 }
 
 nav {
@@ -13,24 +20,19 @@ nav {
 }
 
 #nav__mobile__navbar {
-  background-color: #36403B;
   height: 2.5rem;
   display: flex;
   justify-content: space-between;
-  transform: translateZ(0);
   width: 100vw;
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  transform: translateZ(0);
 }
 
 #nav__desktop__navbar {
-  position: fixed;
+  z-index: 999;
+  position: relative;
 }
 @media (min-width: 768px) {
   #nav__desktop__navbar {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 @media (max-width: 767px) {
@@ -75,9 +77,13 @@ nav {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: center;
   margin-top: 0.2rem;
+}
+@media (min-width: 768px) {
+  #nav__logo__banner {
+    width: 10%;
+  }
 }
 #nav__logo__banner__img {
   background: url("../imgs/flareLogo.png");
@@ -90,6 +96,11 @@ nav {
 }
 #nav__logo__banner__text {
   color: white;
+}
+@media (min-width: 768px) {
+  #nav__logo__banner__text {
+    display: none;
+  }
 }
 
 #nav__mobile__navtray {
@@ -119,10 +130,6 @@ nav {
   font-weight: bold;
 }
 
-main {
-  z-index: 0;
-}
-
 #main__hero {
   width: 100vw;
   height: 50vh;
@@ -140,7 +147,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  z-index: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 #main__content__phoneimage {
@@ -163,7 +169,9 @@ main {
 }
 @media (min-width: 425px) {
   #main__content__phoneimage {
-    margin-left: 8rem;
+    background-size: contain;
+    margin: 0 auto;
+    width: 22rem;
   }
 }
 @media (min-width: 768px) {
@@ -198,7 +206,6 @@ main {
 #main__content__two {
   width: 100vw;
   height: 80vh;
-  z-index: 0;
 }
 #main__content__two__banner {
   height: 40vh;
@@ -218,6 +225,13 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
+}
+@media (min-width: 425px) {
+  #main__content__two__phoneimage {
+    background-size: contain;
+    margin: 0 auto;
+    width: 22rem;
+  }
 }
 #main__content__two__description {
   margin: 0 auto;
@@ -247,7 +261,7 @@ main {
   height: 40%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 10;
-  transform: translateY(-18.3rem);
+  transform: translateY(-17.3rem);
 }
 #main__content__three__cta {
   text-align: center;
