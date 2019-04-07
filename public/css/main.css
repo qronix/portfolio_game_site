@@ -1,25 +1,31 @@
 header {
   height: 2.4rem;
+  width: 100vw;
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  z-index: 999;
 }
 
 nav {
+  z-index: 999;
+  width: 100vw;
+}
+
+#nav__mobile__navbar {
   background-color: #36403B;
   height: 2.5rem;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  z-index: 999;
   transform: translateZ(0);
-}
-
-#nav__mobile__navbar {
   width: 100vw;
-  position: fixed;
+  position: fixed !important;
+  top: 0;
+  left: 0;
   transform: translateZ(0);
 }
 
 #nav__desktop__navbar {
-  position: absolute;
+  position: fixed;
 }
 @media (min-width: 768px) {
   #nav__desktop__navbar {
@@ -112,6 +118,10 @@ nav {
   font-weight: bold;
 }
 
+main {
+  z-index: 0;
+}
+
 #main__hero {
   width: 100vw;
   height: 50vh;
@@ -119,6 +129,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-bottom: 3rem;
 }
 
 #main__content {
@@ -132,21 +143,38 @@ nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 #main__content__phoneimage {
+  padding: 0;
+  margin: 0;
+  position: relative;
   height: 15rem;
-  width: 20rem;
+  width: 19rem;
   max-height: 293px;
   background: url("../imgs/phoneGame1.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left;
+  margin-left: 1rem;
 }
-@media (max-width: 425px) {
+@media (min-width: 375px) {
   #main__content__phoneimage {
-    background-position: right;
-    transform: translateX(-1rem);
+    margin-left: 5rem;
+  }
+}
+@media (min-width: 425px) {
+  #main__content__phoneimage {
+    margin-left: 8rem;
+  }
+}
+@media (min-width: 768px) {
+  #main__content__phoneimage {
+    background-size: contain;
+    height: 20rem;
+    width: 25rem;
+    margin: 0 auto;
   }
 }
 #main__content__description {
-  transform: translateY(-2rem);
+  transform: translateY(-6rem);
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.4px;
@@ -169,8 +197,8 @@ nav {
 
 #main__content__two {
   width: 100vw;
-  height: 120vh;
-  margin-bottom: 5rem;
+  height: 80vh;
+  z-index: 0;
 }
 #main__content__two__banner {
   height: 40vh;
@@ -182,23 +210,28 @@ nav {
   margin-bottom: 5rem;
 }
 #main__content__two__phoneimage {
-  height: 40%;
-  width: 20rem;
+  position: relative;
+  height: 15rem;
+  width: 19rem;
   max-height: 293px;
   background: url("../imgs/phoneGame2.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
 }
-@media (max-width: 425px) {
+@media (min-width: 768px) {
   #main__content__two__phoneimage {
-    background-position: left;
-    transform: translateX(1rem);
+    margin: 0 auto;
+    background-size: contain;
+    width: 25rem;
+    height: 20rem;
   }
 }
 #main__content__two__description {
   margin: 0 auto;
   text-align: center;
   letter-spacing: 0.4px;
+  margin-bottom: 5rem;
 }
 #main__content__two__description p {
   padding: 0 1rem;
@@ -247,6 +280,31 @@ footer {
   background-color: #36403B;
   height: 30vh;
   width: 100vw;
+}
+
+#footer__social h4 {
+  display: block;
+  text-align: center;
+  flex: 100%;
+  padding-top: 1rem;
+  color: white;
+}
+#footer__social ul {
+  padding: 0;
+  display: flex;
+  margin: 0 auto;
+  list-style: none;
+  width: 100vw;
+  max-width: 10rem;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+#footer__social ul li {
+  display: inline;
+}
+#footer__social ul a {
+  color: #D9FFEB;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
