@@ -12,6 +12,7 @@ header{
 nav{
     z-index: 999;
     width: 100vw;
+    height: 100vh;
 }
 
 
@@ -163,8 +164,7 @@ main{
         @media(min-width:768px){
             background-size: contain;
             height: 20rem;
-            width: 25rem;
-            margin: 0 auto;
+            width: 25rem
         }
     }
 
@@ -219,13 +219,6 @@ main{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: right;
-
-        @media(min-width:768px){
-            margin: 0 auto;
-            background-size: contain;
-            width: 25rem;
-            height: 20rem;
-        }
     }
 
     &__description{

@@ -9,6 +9,7 @@ header {
 nav {
   z-index: 999;
   width: 100vw;
+  height: 100vh;
 }
 
 #nav__mobile__navbar {
@@ -170,7 +171,6 @@ main {
     background-size: contain;
     height: 20rem;
     width: 25rem;
-    margin: 0 auto;
   }
 }
 #main__content__description {
@@ -218,14 +218,6 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
-}
-@media (min-width: 768px) {
-  #main__content__two__phoneimage {
-    margin: 0 auto;
-    background-size: contain;
-    width: 25rem;
-    height: 20rem;
-  }
 }
 #main__content__two__description {
   margin: 0 auto;
